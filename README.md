@@ -54,34 +54,6 @@ The PubMed MCP server exposes the full NCBI E-utilities and PubMed Central APIs 
 - Node.js 16+ (install from [nodejs.org](https://nodejs.org))
 - Optional: NCBI API key for higher rate limits (get from [NCBI Account Settings](https://www.ncbi.nlm.nih.gov/account/settings/))
 
-### Setup Steps
-
-1. **Navigate to your MCP directory**:
-
-   ```bash
-   cd ~/Documents/Cline/MCP  # or your preferred MCP directory
-   ```
-
-2. **The server is already built and configured**:
-
-   ```bash
-   ls pubmed-server/
-   # Should show: build/ src/ package.json tsconfig.json README.md
-   ```
-
-3. **Verify build**:
-   ```bash
-   cd pubmed-server
-   ls build/
-   # Should show: index.js and related files
-   ```
-
-## Configuration
-
-Add this to your Cline MCP settings:
-
-- macOS: `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json`
-
 ### Basic Configuration (No API Key)
 
 ```json
@@ -125,8 +97,6 @@ Add this to your Cline MCP settings:
   }
 }
 ```
-
-**Note**: Replace `path/to/pubmed-server` with the absolute path to your server directory.
 
 ## Usage Examples
 
@@ -345,24 +315,6 @@ npm run build
 
 # Development with watch mode
 npm run watch
-```
-
-### Project Structure
-
-```
-pubmed-server/
-├── src/
-│   ├── index.ts          # Main server implementation
-│   ├── types.ts          # TypeScript type definitions
-│   └── api/
-│       ├── eutils.ts     # E-utilities API client
-│       ├── pmc.ts        # PubMed Central API client
-│       └── utils.ts      # Utility functions
-├── build/
-│   └── index.js          # Compiled executable
-├── package.json          # Dependencies and scripts
-├── tsconfig.json         # TypeScript configuration
-└── README.md            # This file
 ```
 
 ### Key Dependencies
